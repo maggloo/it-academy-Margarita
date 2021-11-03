@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stars</title>
+    <style>
+        .star-check{
+            display: none;
+            }
+        .str{
+            display: inline-block;
+            width: 280px;
+            height: 280px;
+            background:url(star0.png) no-repeat
+            }
+        
+        #star1:nth-of-type(1):hover ~ .star :nth-of-type(1),
+        #star2:nth-of-type(2):hover ~ .star :nth-of-type(-n+2),
+        #star3:nth-of-type(3):hover ~ .star :nth-of-type(-n+3),
+        #star4:nth-of-type(4):hover ~ .star :nth-of-type(-n+4),
+        #star5:nth-of-type(5):hover ~ .star :nth-of-type(-n+5) {
+            background:url(star1.png) no-repeat
+        }
+    </style>
+</head>
+<body>
+            <input type="radio" id="star1" name="stars" class="star-check">
+            <input type="radio" id="star2" name="stars" class="star-check">
+            <input type="radio" id="star3" name="stars" class="star-check">
+            <input type="radio" id="star4" name="stars" class="star-check">
+            <input type="radio" id="star5" name="stars" class="star-check">
+        <div class="star">
+            <label for="star1" class="str"></label>
+            <label for="star2" class="str"></label>
+            <label for="star3" class="str"></label>
+            <label for="star4" class="str"></label>
+            <label for="star5" class="str"></label>
+        </div>
+</body>
+</html>
